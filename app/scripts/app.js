@@ -1,3 +1,4 @@
+'use strict';
 /**
  * @ngdoc overview
  * @name ang1App
@@ -14,18 +15,18 @@ angular
     'ngMessages',
     'ngResource',
     'ngRoute',
-    'ngSanitize'
-  ])
-  .config(function ($routeProvider) {
+    'ngSanitize',
+  ]).config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        controller: 'MainCtrl'
       }).when('/bikes', {
-
+        templateUrl: 'views/bikes.html',
+        controller: 'BikesCtrl'
       }).when('/profile', {
-        
+        templateUrl: 'views/profile.html',
+        controller: 'ProfileCtrl'
       }).otherwise({
         redirectTo: '/'
       });
-  });
+  }]);
