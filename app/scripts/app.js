@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @ngdoc overview
  * @name ang1App
@@ -19,13 +17,15 @@ angular
     'ngSanitize'
   ])
   .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
+    $routeProvider.when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
-      })
-      .otherwise({
+      }).when('/bikes', {
+
+      }).when('/profile', {
+        
+      }).otherwise({
         redirectTo: '/'
       });
   });
