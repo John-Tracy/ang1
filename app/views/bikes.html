@@ -1,6 +1,6 @@
 <div class="row" ng-controller="BikesCtrl">
 	<div class="col-md-12">
-		<h1>Bikes html</h1>
+		<h1 ng-click="apiHit()">Bikes html</h1>
 	</div>
 	<div class="col-md-12" ng-repeat="bike in bikes">
 		<h4 >Brand: {{bike.name}}   || Color: {{bike.color}}</h4>
