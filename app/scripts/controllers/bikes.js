@@ -9,20 +9,13 @@
 
 angular.module('ang1App').controller('BikesCtrl', function ($scope, $http) {
  	
-    $scope.bikes = [
-    {name:'yamaha', color:'blue' },
-    {name:'kawasaki', color:'green' },
-    {name:'suzuki', color:'yellow' },
-    {name:'ktm', color:'orange' },
-    {name:'honda', color:'red'}
-  ];
+  $scope.riderData = [];
 
-  $scope.apiHit = function(){
-  	console.log('happening?');
- 		$http.get('http://localhost:3000/api').then(function successCallback(response) {
+  $scope.getRiders = function(){
+ 		$http.get('http://localhost:3000/getAllRiders').then(function successCallback(response) {
     // this callback will be called asynchronously
     // when the response is available
-    console.log(response);
+    $scope.riderData = response.data;
   }, function errorCallback(response) {
     // called asynchronously if an error occurs
     // or server returns response with an error status.
