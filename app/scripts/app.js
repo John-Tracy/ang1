@@ -18,11 +18,8 @@ angular
     'ngSanitize',
   ]).config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      }).when('/bikes', {
-        templateUrl: 'views/bikes.html',
-        controller: 'BikesCtrl'
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl'
       }).when('/profile', {
         templateUrl: 'views/profile.html',
         controller: 'ProfileCtrl'
